@@ -24,3 +24,8 @@ Route::get('/', function () {
 Route::get('/about', function () use ($team) {
     return view('about', ['team' => $team]);
 });
+
+Route::get('/testFromBd', function () use ($team) {
+    $articles = App\Article::all();
+    return view('testBD', ['articles' => $articles]);
+});

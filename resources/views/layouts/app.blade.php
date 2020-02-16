@@ -16,6 +16,7 @@
         <div class="links">
             <a href="/">Main</a>
             <a href="/about">About</a>
+            <a href="/testFromBd">Test query from bd</a>
         </div>
         <div>
             @yield('content')
