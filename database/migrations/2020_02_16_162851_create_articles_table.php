@@ -16,6 +16,8 @@ class CreateArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->string('state');
+            $table->integer('likes_count')->default(0);
             $table->text('body');
             $table->timestamps();
         });

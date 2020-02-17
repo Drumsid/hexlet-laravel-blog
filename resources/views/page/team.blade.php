@@ -3,16 +3,10 @@
 @extends('layouts.app')
 
 <!-- Секция, содержимое которой обычный текст. -->
-@section('title', 'test BD')
+@section('title', 'Команда')
 
 <!-- Секция, содержащая HTML блок. Имеет открывающую и закрывающую часть. -->
 @section('content')
-<h1>Тестовый запрос из базы данных</h1>
-<p>Сортировка по <a href="/rating">рейтингу</a></p>
-
-@foreach ($articles as $article)
-<h2>{{ $article->name }}</h2>
-<div>{{ $article->body }}</div>
-@endforeach
-
+<h1>Команда</h1>
+<p>Тестовая страница Team</p>
 @endsection
