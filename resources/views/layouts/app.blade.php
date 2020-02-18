@@ -17,6 +17,7 @@
             <a href="/">Main</a>
             <a href="/about">About</a>
             <a href="/team">Team</a>
+            <a href="/articles">Articles</a>
             <a href="/testFromBd">Test bd</a>
         </div>
         <div>

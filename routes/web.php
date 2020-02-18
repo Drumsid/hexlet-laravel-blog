@@ -35,3 +35,7 @@ Route::get('/testFromBd', function () use ($team) {
 });
 
 Route::get('/rating ', 'RatingController@index');
+
+// Название сущности в URL во множественном числе, контроллер в единственном
+Route::get('/articles', 'ArticleController@index')
+    ->name('articles.index'); // имя маршрута, нужно для того, чтобы не создавать ссылки руками
