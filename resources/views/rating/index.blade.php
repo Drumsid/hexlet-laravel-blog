@@ -1,6 +1,8 @@
 {{-- BEGIN --}}
 @extends('layouts.app')
 
+@section('title', 'Рейтинг')
+
 @section('content')
     <h1>Рейтинг</h1>
     <p>Сортировка по <a href="/testFromBd">умолчанию</a></p>

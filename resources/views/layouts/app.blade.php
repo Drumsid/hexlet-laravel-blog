@@ -14,11 +14,11 @@
 <body>
     <div class="container mt-4">
         <div class="links">
-            <a href="/">Main</a>
-            <a href="/about">About</a>
-            <a href="/team">Team</a>
-            <a href="/articles">Articles</a>
-            <a href="/testFromBd">Test bd</a>
+            <a href="{{ route('welcome') }}">Main</a>
+            <a href="{{ route('page.about') }}">About</a>
+            <a href="{{ route('page.team') }}">Team</a>
+            <a href="{{ route('articles.index') }}">Articles</a>
+            <a href="{{ route('testBd') }}">Test bd</a>
         </div>
         <div>
             @yield('content')

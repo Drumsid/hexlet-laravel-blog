@@ -19,23 +19,30 @@ $team = [
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 // Route::get('/about', function () use ($team) {
 //     return view('about', ['team' => $team]);
 // });
 
 // альтернативный маршрут для about/
-Route::get('/about', 'PageController@about');
-Route::get('/team', 'PageController@team');
+Route::get('/about', 'PageController@about')
+    ->name('page.about');
+
+Route::get('/team', 'PageController@team')
+    ->name('page.team');
 
 Route::get('/testFromBd', function () use ($team) {
     $articles = App\Article::all();
     return view('testBD', ['articles' => $articles]);
-});
+})->name('testBd');
 
-Route::get('/rating ', 'RatingController@index');
+Route::get('/rating ', 'RatingController@index')
+    ->name('rating.index');
 
 // Название сущности в URL во множественном числе, контроллер в единственном
 Route::get('/articles', 'ArticleController@index')
     ->name('articles.index'); // имя маршрута, нужно для того, чтобы не создавать ссылки руками
+
+Route::get('/articles/{id}', 'ArticleController@show')
+    ->name('articles.show');
