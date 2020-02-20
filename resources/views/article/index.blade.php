@@ -4,6 +4,15 @@
 
 @section('content')
 <h1>Список статей</h1>
+<p>Поиск по статьям</p>
+    {{Form::open(['url' => route('articles.index'), 'method' => 'GET'])}}
+        {{Form::text('q', $q)}}
+        {{Form::submit('найти')}}
+    {{Form::close()}}
+    <br>
+    {{Form::open(['url' => route('articles.index'), 'method' => 'GET'])}}
+        {{Form::submit('очистить форму')}}
+    {{Form::close()}}
 @foreach ($articles as $article)
     <a href="{{route('articles.show', $article)}}">
         <h2>{{$article->name}}</h2>
