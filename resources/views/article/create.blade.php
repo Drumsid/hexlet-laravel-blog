@@ -19,8 +19,7 @@
     {{ Form::label('body', 'Содержание') }}
     {{ Form::textarea('body') }}<br>
 
-    {{ Form::label('state', 'state') }}
-    {{ Form::text('state', 'published') }}<br>
+    {{ Form::select('state', ['draft' => 'Черновик', 'published' => 'Опубликован']) }}<br>
 
     {{ Form::submit('Создать') }}
 {{ Form::close() }}

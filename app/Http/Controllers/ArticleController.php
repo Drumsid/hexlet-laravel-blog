@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
 use App\Article;
 
@@ -44,7 +45,10 @@ class ArticleController extends Controller
         $this->validate($request, [
             'name' => 'required|unique:articles',
             'body' => 'required|min:10',
-            'state' => 'required'
+            'state' => [
+                'required',
+                Rule::in(['draft', 'published']),
+            ]
         ]);
 
         $article = new Article();
