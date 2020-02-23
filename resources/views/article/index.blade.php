@@ -22,4 +22,7 @@
     {{-- Используется для очень длинных текстов, которые нужно сократить --}}
     <div>{{Str::limit($article->body, 200)}}</div>
 @endforeach
+<br><br><br>
+<a href="{{ route('articles.create') }}">Создать статью</a><br>
+{{ $articles->links() }}
 @endsection
