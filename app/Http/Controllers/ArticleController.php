@@ -85,4 +85,14 @@ class ArticleController extends Controller
         return redirect()
             ->route('articles.index');
     }
+
+    public function destroy($id)
+    {
+        $category = Article::find($id);
+        if ($category) {
+            $category->delete();
+        }
+
+        return redirect()->route('articles.index');
+    }
 }
